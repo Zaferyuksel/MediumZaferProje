@@ -1,0 +1,61 @@
+body {
+    font-family: 'PT Serif', serif;
+}
+.navrenk {
+    background-color: #FF6347; 
+}
+.border-botton-dark {
+    border-bottom: 1px solid #222222;
+}
+
+
+#karbox {
+    height: 50vh;
+    background-color: #FF6347;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+}
+
+.letter {
+    position: absolute;
+    top: -100px;
+    animation: rain 5s linear infinite;
+}
+
+@keyframes rain {
+    0% {
+        top: -55px;
+    }
+    100% {
+        top: 50vh;
+    }
+}
+#writenav{
+    background-color: #FFA500;
+}
+a{
+    text-decoration: none;
+}
+p {
+    font-family: 'PT Serif', serif;
+    font-size: 20px;
+}
+strong{
+    color: black;
+}
+.menu{
+    display: none;
+}
+#wr{
+    border-color: #222222;
+    box-shadow: 1px 1px 1px #A52A2A;
+}
+#exampleFormControlTextarea1{
+    box-shadow: 1px 1px 1px #A52A2A;
+    border-color: #222222;
+}
+#s{
+    background-color: hsl(94, 43%, 86%);
+}

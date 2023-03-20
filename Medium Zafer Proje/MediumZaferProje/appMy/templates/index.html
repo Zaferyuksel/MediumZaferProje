@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block body %}
+  <!-- Main Başlangıç -->
+  <main>
+    <!-- Vitrin Başlangıç -->
+    <div class="navrenk py-5 border-botton-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 ">
+            <h1 class="display-1 text-dark">
+              Stay curious.
+            </h1>
+            <p class="h4 text-dark">
+              Discover stories, thinking, and expertise from writers on any topic.
+            </p>
+            <a href="/register.html" class="btn btn-outline-dark">Get Started</a>
+          </div>
+          <div class="col-6">
+            <div class="karbox" id="karbox">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Vitrin Bitiş -->
+
+
+    <!-- Popüler Yazılar Başlangıç -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"/>
+          </svg>
+          <h6 class="ml-2 fw-bold">Trending on Medium</h6>
+        </div>
+        <!-- Yazı 1 Başlangıç -->
+        <article class="col-sm-4">
+          <div class="row">
+            <div class="col-1"><h6 class="text-black-50">01</h6></div>
+            <div class="col-11">
+              <img class="rounded-circle" src="https://picsum.photos/id/11/25/25" alt="">
+              <span>Tom Cooper</span>
+              <h6 class="mt-2">
+                <a href="/detail.html"><strong>Ukraine War, 4 March 2023</strong></a>
+              </h6>
+              <ul class="list-inline small">
+                <li class="list-inline-item">Mar 4</li>
+                <li class="list-inline-item">9 min read</li>
+              </ul>
+              
+            </div>
+          </div>
+        </article>
+        <!-- Yazı 1 Bitiş -->
+        <article class="col-sm-4">
+          <div class="row">
+            <div class="col-1"><h6 class="text-black-50">02</h6></div>
+            <div class="col-11">
+              <img class="rounded-circle" src="https://picsum.photos/id/12/25/25" alt="">
+              <span>Praveen Seshadri</span>
+              <h6 class="mt-2">
+                <strong>The maze is in the mouse</strong>
+              </h6>
+              <ul class="list-inline small">
+                <li class="list-inline-item">Feb 14</li>
+                <li class="list-inline-item">15 min read</li>
+              </ul>
+              
+            </div>
+          </div>
+        </article>
+
+        <article class="col-sm-4">
+          <div class="row">
+            <div class="col-1"><h6 class="text-black-50">03</h6></div>
+            <div class="col-11">
+              <img class="rounded-circle" src="https://picsum.photos/id/14/25/25" alt="">
+              <span>Darius Foroux</span>
+              <h6 class="mt-2">
+                <strong>The Simple Mental Model That Changed My Financial Life</strong>
+              </h6>
+              <ul class="list-inline small">
+                <li class="list-inline-item">Feb 2</li>
+                <li class="list-inline-item">5 min read</li>
+              </ul>
+              
+            </div>
+          </div>
+        </article>
+
+        <article class="col-sm-4">
+          <div class="row">
+            <div class="col-1"><h6 class="text-black-50">04</h6></div>
+            <div class="col-11">
+              <img class="rounded-circle" src="https://picsum.photos/id/15/25/25" alt="">
+              <span>Maia Niguel Hoskin, Ph.D.inZORA</span>
+              <h6 class="mt-2">
+                <strong>Seeing Black Women Twerk On The Gram Makes My Skin Crawl</strong>
+              </h6>
+              <ul class="list-inline small">
+                <li class="list-inline-item">Mar 3</li>
+                <li class="list-inline-item">5 min read</li>
+              </ul>
+              
+            </div>
+          </div>
+        </article>
+
+        <article class="col-sm-4">
+          <div class="row">
+            <div class="col-1"><h6 class="text-black-50">05</h6></div>
+            <div class="col-11">
+              <img class="rounded-circle" src="https://picsum.photos/id/17/25/25" alt="">
+              <span>Chris Zubak-Skees in Washington Post Engineering</span>
+              <h6 class="mt-2">
+                <strong>Here’s how The Washington Post verified its journalists on Mastodon</strong>
+              </h6>
+              <ul class="list-inline small">
+                <li class="list-inline-item">Mar 6</li>
+                <li class="list-inline-item">4 min read</li>
+              </ul>
+              
+            </div>
+          </div>
+        </article>
+
+        <article class="col-sm-4">
+          <div class="row">
+            <div class="col-1"><h6 class="text-black-50">06</h6></div>
+            <div class="col-11">
+              <img class="rounded-circle" src="https://picsum.photos/id/11/25/25" alt="">
+              <span>Madison Hunter in Towards Data Science</span>
+              <h6 class="mt-2">
+                <strong>How to Create an Effective Self-Study Routine to Teach Yourself Data Science Successfully...</strong>
+              </h6>
+              <ul class="list-inline small">
+                <li class="list-inline-item">Feb 25</li>
+                <li class="list-inline-item">9 min read</li>
+              </ul>
+              
+            </div>
+          </div>
+        </article>  
+      </div>
+    </div>
+    <hr>
+    <!-- Popüler Yazılar Bitiş -->
+
+    <!-- Tüm Yazılar Başlangıç -->
+    <div class="mt-5" id="all">
+      <div class="container">
+        <div class="row">
+          <!-- Kategori -->
+          <div class="col-sm-4">
+            <ul class="mt-1 ms-3 ">
+              <button class="btn btn-secondary mt-2 ms-2">kategori</button>
+              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
+              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
+              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
+              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
+              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
+              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
+              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
+              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
+              
+            </ul>
+          </div>
+          <!-- Kategori Bitiş -->
+
+          <div class="col-sm-8">
+            <div class="row d-flex align-items-center">
+              <!-- 1.Forum Başlangıç col-8 -->
+              <div class="col-8">
+                <article class="">
+                  <div class="row">
+                    <div>
+                      <img class="rounded-circle" src="https://picsum.photos/id/11/25/25" alt="">
+                      <span>Medium Staff in 3 Min Read</span>
+                      <h4 class="mt-2"><strong>What We’re Reading: To meet or not to meet?</strong></h4>
+                      <p class="opacity-75"><strong> A few stories you may have missed this week</strong></p>
+                      <ul class="list-inline small opacity-75">
+                        <li class="list-inline-item">Feb 25</li>
+                        <li class="list-inline-item">9 min read</li>
+                        <button class="btn btn-secondary rounded-pill">Kategori</button>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <!-- 1.Form Bitiş col-8 -->
+
+              <!-- Yazı Resimleri Başlangıç -->
+              <div class="col-4">
+                <div class="img w-100">
+                  <img width="202" height="133" src="img/mediumdeneme.webp" alt="">
+                </div>
+              </div>
+              <!-- Yazı Resimleri Bitiş -->
+              <div class="col-8">
+                <article class="">
+                  <div class="row">
+                    <div>
+                      <img class="rounded-circle" src="https://picsum.photos/id/11/25/25" alt="">
+                      <span>Dr. Diana Leite</span>
+                      <h4 class="mt-2"><strong>The art of quitting — lessons from my Ph.D. journey</strong></h4>
+                      <p class="opacity-75"><strong>Advice Column for Graduate Students and Applicants</strong></p>
+                      <ul class="list-inline small opacity-75">
+                        <li class="list-inline-item">Feb 10</li>
+                        <li class="list-inline-item">12 min read</li>
+                        <button class="btn btn-secondary rounded-pill">Kategori</button>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-4">
+                <div class="img w-100">
+                  <img src="img/medium2.PNG" alt="">
+                </div>
+              </div>
+
+              <div class="col-8">
+                <article class="">
+                  <div class="row">
+                    <div>
+                      <img class="rounded-circle" src="https://picsum.photos/id/11/25/25" alt="">
+                      <span>Jane Elliott PhD</span>
+                      <h4 class="mt-2"><strong>How ‘Should’ Makes Us Stupid — And How to Get Smart Again</strong></h4>
+                      <p class="opacity-75"><strong>When we say we ‘should’ do something, we frame our goal in a way that makes change less likely. Here’s how to motivate differently.</strong></p>
+                      <ul class="list-inline small opacity-75">
+                        <li class="list-inline-item">Feb 27</li>
+                        <li class="list-inline-item">6 min read</li>
+                        <button class="btn btn-secondary rounded-pill">Kategori</button>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-4">
+                <div class="img w-100">
+                  <img src="img/medium3.PNG" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tüm Yazılar Bitiş -->
+
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+  </main>
+  <!-- Main Bitiş -->
+{% endblock body %}
+  
+
