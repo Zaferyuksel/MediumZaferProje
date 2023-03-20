@@ -22,6 +22,11 @@ from appMy.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index),
-    path('login/',Login)
+    path('detail/', Detail),
+    path('login/',Login),
+    path('profil/', Profil),
+    path('register/',Register),
+    path('write/', Write),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
