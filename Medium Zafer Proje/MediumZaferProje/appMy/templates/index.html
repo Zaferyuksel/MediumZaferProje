@@ -41,12 +41,11 @@
           </svg>
           <h6 class="ml-2 fw-bold">Trending on Medium</h6>
         </div>
-        
         {% for i in products %}
         <!-- Yazı 1 Başlangıç -->
         <article class="col-sm-4">
           <div class="row">
-            <div class="col-1"><h6 class="text-black-50">01</h6></div>
+            <div class="col-1"><h6 class="text-black-50">0{{ i.id }}</h6></div>
             <div class="col-11">
               <img class="rounded-circle" src="{{ i.user_img.url }}" height="25px" width="25px" alt="">
               <span>{{ i.user }}</span>
@@ -63,8 +62,6 @@
         </article>
         <!-- Yazı 1 Bitiş -->
         {% endfor %}
-          
-        
       </div>
     </div>
     <hr>
@@ -88,78 +85,38 @@
 
           <div class="col-sm-8">
             <div class="row d-flex align-items-center">
+              
+              {% for i in articles %}
               <!-- 1.Forum Başlangıç col-8 -->
-              <div class="col-8">
-                <article class="">
-                  <div class="row">
-                    <div>
-                      <img class="rounded-circle" src="https://picsum.photos/id/11/25/25" alt="">
-                      <span>Medium Staff in 3 Min Read</span>
-                      <h4 class="mt-2"><strong>What We’re Reading: To meet or not to meet?</strong></h4>
-                      <p class="opacity-75"><strong> A few stories you may have missed this week</strong></p>
-                      <ul class="list-inline small opacity-75">
-                        <li class="list-inline-item">Feb 25</li>
-                        <li class="list-inline-item">9 min read</li>
-                        <button class="btn btn-secondary rounded-pill">Kategori</button>
-                      </ul>
+                <div class="col-8">
+                  <article class="">
+                    <div class="row">
+                      <div>
+                        <img class="rounded-circle" src="{{ i.user_img.url }}" height="25px" width="25px" alt="">
+                        <span>{{ i.user }}</span>
+                        <h4 class="mt-2"><a href="/detail/{{ i.id }}/"><strong>{{ i.title }}</strong></a></h4>
+                        <p class="opacity-75"><a href="/detail/{{ i.id }}/"><strong>{{ i.subject }}</strong></a></p>
+                        <ul class="list-inline small opacity-75">
+                          <li class="list-inline-item">{{ i.date_now }}</li>
+                          <li class="list-inline-item">{{ i.read_time }} min read</li>
+                          <button class="btn btn-secondary rounded-pill">{{ i.category.title }}</button>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                </article>
-              </div>
-              <!-- 1.Form Bitiş col-8 -->
-
-              <!-- Yazı Resimleri Başlangıç -->
-              <div class="col-4">
-                <div class="img w-100">
-                  <img width="202" height="133" src="../static/img/mediumdeneme.webp" alt="">
+                  </article>
                 </div>
-              </div>
+                <!-- 1.Form Bitiş col-8 -->
+  
+                <!-- Yazı Resimleri Başlangıç -->
+                <div class="col-4">
+                  <div class="img w-100">
+                    <img width="202" height="133" src="{{ i.image.url }}" alt="">
+                  </div>
+                </div>
               <!-- Yazı Resimleri Bitiş -->
-              <div class="col-8">
-                <article class="">
-                  <div class="row">
-                    <div>
-                      <img class="rounded-circle" src="https://picsum.photos/id/11/25/25" alt="">
-                      <span>Dr. Diana Leite</span>
-                      <h4 class="mt-2"><strong>The art of quitting — lessons from my Ph.D. journey</strong></h4>
-                      <p class="opacity-75"><strong>Advice Column for Graduate Students and Applicants</strong></p>
-                      <ul class="list-inline small opacity-75">
-                        <li class="list-inline-item">Feb 10</li>
-                        <li class="list-inline-item">12 min read</li>
-                        <button class="btn btn-secondary rounded-pill">Kategori</button>
-                      </ul>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="col-4">
-                <div class="img w-100">
-                  <img src="img/medium2.PNG" alt="">
-                </div>
-              </div>
-
-              <div class="col-8">
-                <article class="">
-                  <div class="row">
-                    <div>
-                      <img class="rounded-circle" src="https://picsum.photos/id/11/25/25" alt="">
-                      <span>Jane Elliott PhD</span>
-                      <h4 class="mt-2"><strong>How ‘Should’ Makes Us Stupid — And How to Get Smart Again</strong></h4>
-                      <p class="opacity-75"><strong>When we say we ‘should’ do something, we frame our goal in a way that makes change less likely. Here’s how to motivate differently.</strong></p>
-                      <ul class="list-inline small opacity-75">
-                        <li class="list-inline-item">Feb 27</li>
-                        <li class="list-inline-item">6 min read</li>
-                        <button class="btn btn-secondary rounded-pill">Kategori</button>
-                      </ul>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="col-4">
-                <div class="img w-100">
-                  <img src="img/medium3.PNG" alt="">
-                </div>
-              </div>
+              {% endfor %}
+                
+              
             </div>
           </div>
           <!-- Tüm Yazılar Bitiş -->
