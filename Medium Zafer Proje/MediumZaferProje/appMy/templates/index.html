@@ -41,114 +41,30 @@
           </svg>
           <h6 class="ml-2 fw-bold">Trending on Medium</h6>
         </div>
+        
+        {% for i in products %}
         <!-- Yazı 1 Başlangıç -->
         <article class="col-sm-4">
           <div class="row">
             <div class="col-1"><h6 class="text-black-50">01</h6></div>
             <div class="col-11">
-              <img class="rounded-circle" src="https://picsum.photos/id/11/25/25" alt="">
-              <span>Tom Cooper</span>
+              <img class="rounded-circle" src="{{ i.user_img.url }}" height="25px" width="25px" alt="">
+              <span>{{ i.user }}</span>
               <h6 class="mt-2">
-                <a href="/detail"><strong>Ukraine War, 4 March 2023</strong></a>
+                <a href="/detail/{{ i.id }}/"><strong>{{ i.title }}</strong></a>
               </h6>
               <ul class="list-inline small">
-                <li class="list-inline-item">Mar 4</li>
-                <li class="list-inline-item">9 min read</li>
+                <li class="list-inline-item">{{ i.date_now }}</li>
+                <li class="list-inline-item">{{ i.read_time }} min read</li>
               </ul>
               
             </div>
           </div>
         </article>
         <!-- Yazı 1 Bitiş -->
-        <article class="col-sm-4">
-          <div class="row">
-            <div class="col-1"><h6 class="text-black-50">02</h6></div>
-            <div class="col-11">
-              <img class="rounded-circle" src="https://picsum.photos/id/12/25/25" alt="">
-              <span>Praveen Seshadri</span>
-              <h6 class="mt-2">
-                <strong>The maze is in the mouse</strong>
-              </h6>
-              <ul class="list-inline small">
-                <li class="list-inline-item">Feb 14</li>
-                <li class="list-inline-item">15 min read</li>
-              </ul>
-              
-            </div>
-          </div>
-        </article>
-
-        <article class="col-sm-4">
-          <div class="row">
-            <div class="col-1"><h6 class="text-black-50">03</h6></div>
-            <div class="col-11">
-              <img class="rounded-circle" src="https://picsum.photos/id/14/25/25" alt="">
-              <span>Darius Foroux</span>
-              <h6 class="mt-2">
-                <strong>The Simple Mental Model That Changed My Financial Life</strong>
-              </h6>
-              <ul class="list-inline small">
-                <li class="list-inline-item">Feb 2</li>
-                <li class="list-inline-item">5 min read</li>
-              </ul>
-              
-            </div>
-          </div>
-        </article>
-
-        <article class="col-sm-4">
-          <div class="row">
-            <div class="col-1"><h6 class="text-black-50">04</h6></div>
-            <div class="col-11">
-              <img class="rounded-circle" src="https://picsum.photos/id/15/25/25" alt="">
-              <span>Maia Niguel Hoskin, Ph.D.inZORA</span>
-              <h6 class="mt-2">
-                <strong>Seeing Black Women Twerk On The Gram Makes My Skin Crawl</strong>
-              </h6>
-              <ul class="list-inline small">
-                <li class="list-inline-item">Mar 3</li>
-                <li class="list-inline-item">5 min read</li>
-              </ul>
-              
-            </div>
-          </div>
-        </article>
-
-        <article class="col-sm-4">
-          <div class="row">
-            <div class="col-1"><h6 class="text-black-50">05</h6></div>
-            <div class="col-11">
-              <img class="rounded-circle" src="https://picsum.photos/id/17/25/25" alt="">
-              <span>Chris Zubak-Skees in Washington Post Engineering</span>
-              <h6 class="mt-2">
-                <strong>Here’s how The Washington Post verified its journalists on Mastodon</strong>
-              </h6>
-              <ul class="list-inline small">
-                <li class="list-inline-item">Mar 6</li>
-                <li class="list-inline-item">4 min read</li>
-              </ul>
-              
-            </div>
-          </div>
-        </article>
-
-        <article class="col-sm-4">
-          <div class="row">
-            <div class="col-1"><h6 class="text-black-50">06</h6></div>
-            <div class="col-11">
-              <img class="rounded-circle" src="https://picsum.photos/id/11/25/25" alt="">
-              <span>Madison Hunter in Towards Data Science</span>
-              <h6 class="mt-2">
-                <strong>How to Create an Effective Self-Study Routine to Teach Yourself Data Science Successfully...</strong>
-              </h6>
-              <ul class="list-inline small">
-                <li class="list-inline-item">Feb 25</li>
-                <li class="list-inline-item">9 min read</li>
-              </ul>
-              
-            </div>
-          </div>
-        </article>  
+        {% endfor %}
+          
+        
       </div>
     </div>
     <hr>
@@ -161,16 +77,11 @@
           <!-- Kategori -->
           <div class="col-sm-4">
             <ul class="mt-1 ms-3 ">
-              <button class="btn btn-secondary mt-2 ms-2">kategori</button>
-              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
-              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
-              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
-              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
-              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
-              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
-              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
-              <button class="btn btn-secondary mt-2 ms-2 ">kategori</button>
-              
+
+              {% for i in butons %} 
+              <button class="btn btn-secondary mt-2 ms-2">{{ i.title }}</button>
+              {% endfor %}
+
             </ul>
           </div>
           <!-- Kategori Bitiş -->

@@ -1,15 +1,28 @@
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
 
 
 def index(request):
+    products = Article.objects.all()[0:6]
+    butons = Category.objects.all().order_by("?")[0:9]
+    articles = Article.objects.all()
 
-    return render(request,'index.html')
+    context ={
+        "products": products,
+        "butons":butons,
+        "articles":articles,
+    }
+    return render(request,'index.html',context)
 
-def Detail(request):
+def Detail(request,id):
+    product= Article.objects.get(id=id)
 
-    return render(request,'detail.html')
+    context={
+        "product":product
+    }
+
+    return render(request,'detail.html',context)
 
 def Login(request):
 

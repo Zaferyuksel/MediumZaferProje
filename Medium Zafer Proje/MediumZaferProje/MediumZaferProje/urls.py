@@ -22,7 +22,7 @@ from appMy.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index),
-    path('detail/', Detail),
+    path('detail/<id>/', Detail, name="Detail"),
     path('login/',Login),
     path('profil/', Profil),
     path('register/',Register),
