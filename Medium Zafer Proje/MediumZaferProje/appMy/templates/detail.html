@@ -25,33 +25,28 @@
             <!-- User Bilgi Bitiş -->
 
             <!-- Başlık Başlangıç -->
-            <div class="container mt-3 justify-content-center">
-                <div class="row">
-                  <div class="col">
-                    <h1>{{ product.title }}</h1>
-                    <h4 class="mt-1 opacity-75">{{ product.subject }}</h5>
-                    <div class="col mt-5">
-                      <img src="{{ product.image.url }}" height="650px" width="900px" alt="">
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="container mt-3 justify-content-center">
+                    <div class="row">
+                      <div class="col">
+                        <h1>{{ product.title }}</h1>
+                        <h4 class="mt-1 opacity-75">{{ product.subject }}</h5>
+                        <div class="col mt-5">
+                          <img src="{{ product.image.url }}" height="550px" width="750px" alt="">
+                        </div>
+                        <div class="align-content-center mt-4">
+                          <p>
+                            {{ product.text|linebreaks }}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <div class="align-content-center mt-4">
-                      <p>
-                        {{ product.text }}
-                      </p>
-                      <!-- <p>
-                        While some other government branches and intelligence agencies disagree and lean toward the natural origin hypothesis, all now seem to regard the “lab leak theory” as plausible and deserving of further investigation.
-                      </p>
-                      <p>
-                        ‘If you follow the trail of how the lab leak theory was squashed by some very vocal individuals, you will see that it was done with many conflicts of interest.’
-                      </p>
-                      <p>
-                        Even if it turns out that the virus did not originate in a Wuhan research lab, the fact that this is now regarded as an entirely possible scenario is bewildering to me. For a long time, I was under the impression that the lab leak theory had been debunked and discredited.
-                      </p>
-                      <p>
-                        I’m sure this reveals something about the types of news media I consume (and the types I don’t). But however I acquired it, my views were twofold:
-                      </p> -->
-                    </div>
-                  </div>
-                </div>
+                </div> 
+              </div>
+              <div class="col-sm-4">
+                
+              </div>
             </div>
             <!-- Başlık Bitiş -->
         </div>
